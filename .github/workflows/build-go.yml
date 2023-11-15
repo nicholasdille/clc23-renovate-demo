@@ -6,11 +6,13 @@ on:
     - "go/*.go"
     - "go/go.mod"
     - "go/go.sum"
+    - ".github/workflows/build-go.yml"
   pull_request:
     paths:
     - "go/*.go"
     - "go/go.mod"
     - "go/go.sum"
+    - ".github/workflows/build-go.yml"
   workflow_dispatch:
 
 permissions:
