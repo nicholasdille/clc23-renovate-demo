@@ -31,4 +31,4 @@ jobs:
     - name: Smoke test
       run: |
         cowsay --help
-        figlet --help
+        pyfiglet --help
