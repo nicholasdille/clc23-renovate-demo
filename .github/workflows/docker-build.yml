@@ -53,6 +53,6 @@ jobs:
         platforms: linux/amd64
         provenance: false
         sbom: false
-        cache-from: ${{ github.repository }}:${{ env.IMAGE_TAG }}
+        cache-from: ghcr.io/${{ github.repository }}:${{ env.IMAGE_TAG }}
         push: ${{ github.event_name != 'pull_request' }}
-        tags: ${{ github.repository }}:${{ env.IMAGE_TAG }}
+        tags: ghcr.io/${{ github.repository }}:${{ env.IMAGE_TAG }}
