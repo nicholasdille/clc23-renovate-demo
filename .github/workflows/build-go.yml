@@ -30,7 +30,6 @@ jobs:
 
     - name: Build binary
       run: |
-        go version
         cd go
         go build -o ../hello .
 

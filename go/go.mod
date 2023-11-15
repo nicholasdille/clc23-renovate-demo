@@ -1,5 +1,5 @@
 module github.com/nicholasdille/clc23-renovate-demo
 
-go 1.21.3
+go 1.20.10
 
 require github.com/TwiN/go-color v1.4.0
