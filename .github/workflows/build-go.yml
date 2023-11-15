@@ -1,0 +1,43 @@
+name: build-go
+
+on:
+  push:
+    paths:
+    - "go/*.go"
+    - "go/go.mod"
+    - "go/go.sum"
+    - ".github/workflows/build-go.yml"
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - labeled
+    - reopened
+    paths:
+    - "go/*.go"
+    - "go/go.mod"
+    - "go/go.sum"
+    - ".github/workflows/build-go.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+
+  build-go:
+    name: build-go
+    runs-on: ubuntu-22.04
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build binary
+      run: |
+        cd go
+        go build -o ../hello .
+
+    - name: Smoke test
+      run: |
+        ./hello

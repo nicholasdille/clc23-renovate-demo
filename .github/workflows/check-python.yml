@@ -1,0 +1,39 @@
+name: check-python
+
+on:
+  push:
+    paths:
+    - "requirements.txt"
+    - ".github/workflows/check-python.yml"
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - labeled
+    - reopened
+    paths:
+    - "requirements.txt"
+    - ".github/workflows/check-python.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+
+  check-python:
+    name: check-python
+    runs-on: ubuntu-22.04
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install
+      run: |
+        pip install --requirement requirements.txt
+
+    - name: Smoke test
+      run: |
+        cowsay --help
+        pyfiglet --help
