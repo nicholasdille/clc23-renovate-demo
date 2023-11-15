@@ -6,6 +6,11 @@ on:
     - "requirements.txt"
     - ".github/workflows/check-python.yml"
   pull_request:
+    types:
+    - opened
+    - synchronize
+    - labeled
+    - reopened
     paths:
     - "requirements.txt"
     - ".github/workflows/check-python.yml"

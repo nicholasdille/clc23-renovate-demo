@@ -6,7 +6,6 @@ on:
     - "renovate/**"
     paths:
     - "ubuntu/22.04/**"
-    - "!ubuntu/22.04/README.md"
     - ".github/workflows/docker-build.yml"
   pull_request:
     types:
@@ -16,7 +15,6 @@ on:
     - reopened
     paths:
     - "ubuntu/22.04/**"
-    - "!ubuntu/22.04/README.md"
     - ".github/workflows/docker-build.yml"
   workflow_dispatch:
 

@@ -8,6 +8,11 @@ on:
     - "go/go.sum"
     - ".github/workflows/build-go.yml"
   pull_request:
+    types:
+    - opened
+    - synchronize
+    - labeled
+    - reopened
     paths:
     - "go/*.go"
     - "go/go.mod"
