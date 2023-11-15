@@ -6,5 +6,11 @@
     "prHourlyLimit": 0,
     "prConcurrentLimit": 0,
     "pinDigests": true,
-    "dependencyDashboard": true
+    "dependencyDashboard": true,
+    "packageRules": [
+        {
+            "matchUpdateTypes": [ "digest", "patch", "pin", "pinDigest" ],
+            "automerge": true
+        }
+    ]
   }
