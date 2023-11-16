@@ -1,2 +1,2 @@
 cowsay==5.0
-pyfiglet==1.0.1
+pyfiglet==1.0.2
