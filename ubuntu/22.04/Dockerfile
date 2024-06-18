@@ -1,6 +1,6 @@
 #syntax=docker/dockerfile:1.6.0@sha256:ac85f380a63b13dfcefa89046420e1781752bab202122f8f50032edf31be0021
 
-FROM ubuntu:22.04@sha256:19478ce7fc2ffbce89df29fea5725a8d12e57de52eb9ea570890dc5852aac1ac AS base
+FROM ubuntu:24.04@sha256:2e863c44b718727c860746568e1d54afd13b2fa71b160f5cd9058fc436217b30 AS base
 
 SHELL [ "bash", "-o", "errexit", "-c"]
 ARG DEBIAN_FRONTEND=noninteractive
